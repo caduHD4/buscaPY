@@ -1,0 +1,59 @@
+[
+  {
+    "id": 70600,
+    "name": "PATINETE ELÉTRICO  XIAOMI MI SCOOTER 5PLUS BHR081CUS",
+    "permalink": "https://casamaringa.com.py/produto/patinete-eletrico-xiaomi-mi-scooter-5plus-bhr081cus/",
+    "prices": {
+      "price": "42368",
+      "regular_price": "42368",
+      "sale_price": "42368",
+      "price_range": null,
+      "currency_code": "USD",
+      "currency_symbol": "$",
+      "currency_minor_unit": 2,
+      "currency_decimal_separator": ",",
+      "currency_thousand_separator": ".",
+      "currency_prefix": "$",
+      "currency_suffix": ""
+    },
+    "images": [
+      {
+        "src": "https://i0.wp.com/casamaringa.com.py/wp-content/uploads/2026/06/patineta_electrica_xiaomi_mi_scooter_5_plus_bhr080tgl_negro_145538_0004.jpg?fit=600%2C600&ssl=1"
+      },
+      {
+        "src": "https://i0.wp.com/casamaringa.com.py/wp-content/uploads/2026/06/patineta_electrica_xiaomi_mi_scooter_5_plus_bhr080tgl_negro_145538_0000.jpg?fit=600%2C600&ssl=1"
+      }
+    ],
+    "is_in_stock": true
+  },
+  {
+    "id": 70591,
+    "name": "PATINETE ELÉTRICO  XIAOMI MI SCOOTER5MAX BHR9619FR",
+    "permalink": "https://casamaringa.com.py/produto/patinete-eletrico-xiaomi-mi-scooter5max-bhr9619fr/",
+    "prices": {
+      "price": "48354",
+      "regular_price": "48354",
+      "sale_price": "48354",
+      "price_range": null,
+      "currency_code": "USD",
+      "currency_symbol": "$",
+      "currency_minor_unit": 2,
+      "currency_decimal_separator": ",",
+      "currency_thousand_separator": ".",
+      "currency_prefix": "$",
+      "currency_suffix": ""
+    },
+    "images": [
+      {
+        "src": "https://i0.wp.com/casamaringa.com.py/wp-content/uploads/2026/06/9-Copia.webp?fit=600%2C600&ssl=1"
+      },
+      {
+        "src": "https://i0.wp.com/casamaringa.com.py/wp-content/uploads/2026/06/8.webp?fit=600%2C600&ssl=1"
+      },
+      {
+        "src": "https://i0.wp.com/casamaringa.com.py/wp-content/uploads/2026/06/7.webp?fit=600%2C600&ssl=1"
+      }
+    ],
+    "is_in_stock": true
+  }
+]

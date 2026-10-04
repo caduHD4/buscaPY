@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142f35"><title>BuscaPY — Compare antes de comprar</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23142f35'/%3E%3Cpath d='M9 8h8a6 6 0 010 12h-4v5H9zm4 4v4h4a2 2 0 000-4z' fill='%23b6edc9'/%3E%3C/svg%3E"><style>:root{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#142f35;background:#f4f6f4;font-synthesis:none;--ink:#142f35;--muted:#657575;--line:#dce4de;--accent:#b6edc9}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:wait;opacity:.65}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #29876c;outline-offset:3px}[hidden]{display:none!important}.skip{position:fixed;left:12px;top:-100px;z-index:20;background:white;padding:15px}.skip:focus{top:12px}.topbar{background:#fff;border-bottom:1px solid var(--line)}.top-inner{max-width:1280px;margin:auto;height:82px;padding:0 32px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;font-size:23px;font-weight:750;text-decoration:none;letter-spacing:-.7px}.brandmark{display:grid;place-items:center;width:34px;height:36px;background:var(--ink);color:var(--accent);border-radius:10px;margin-right:10px;font-size:24px}.brand-py{color:#45876c}.top-note{font-size:13px;color:var(--muted);border-left:1px solid var(--line);padding-left:28px}.currency{margin-left:auto;font-size:12px;font-weight:650}.currency span{color:var(--muted);font-weight:400}.shell{max-width:1280px;margin:auto;padding:0 32px}.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center;padding:58px 0 48px}.eyebrow{font-size:10px;letter-spacing:1.6px;font-weight:750;color:#547968;margin:0 0 18px}h1{font-size:clamp(36px,4.3vw,56px);line-height:1.06;letter-spacing:-2px;font-weight:650;margin:0}h1 span{color:#678777}.hero-copy{color:var(--muted);font-size:14px;line-height:1.75;margin:20px 0 0}.search-block label{font-size:13px;display:block;margin-bottom:12px;font-weight:650}.search-field{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid #c5d4ca;border-radius:12px;background:white;box-shadow:0 6px 18px #142f3506}.search-field>span{font-size:28px;padding-left:10px;line-height:1;color:#678777}.search-field input{flex:1;width:0;min-width:0;padding:12px 2px;border:0;background:transparent;font-size:14px;outline:none}.search-field:focus-within{border-color:#36866a;box-shadow:0 0 0 3px #b6edc960}.primary{border:0;border-radius:8px;background:var(--ink);color:white;padding:14px 20px;font-size:13px;font-weight:650;white-space:nowrap}.primary span{margin-left:15px}.suggestions{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:14px;font-size:11px;color:var(--muted)}.suggestions button{border:1px solid var(--line);border-radius:6px;padding:6px 9px;background:transparent;color:var(--ink);font-size:11px}.suggestions button:hover{background:#fff}.sources-line{display:flex;align-items:center;gap:9px;font-size:11px;color:var(--muted);margin-top:23px}.source-dot{height:6px;width:6px;border-radius:50%;background:#419473}.separator{color:#a8b5ac;padding:0 5px}.workspace{border-top:1px solid var(--line)}.toolbar{display:flex;align-items:center;justify-content:space-between;padding:28px 0 22px;gap:16px}.result-summary h2{font-size:20px;letter-spacing:-.4px;margin:0 0 5px}.result-summary p{font-size:12px;color:var(--muted);margin:0}.text-button{border:0;background:none;color:#426951;font-size:12px;text-decoration:underline;text-underline-offset:4px;padding:10px}.filters{display:flex;gap:14px;align-items:end;margin-bottom:24px}.filters label{display:grid;gap:7px;font-size:10px;font-weight:650;color:var(--muted)}.filters select,.filters input{height:40px;border:1px solid var(--line);background:#fff;border-radius:7px;padding:0 12px;font-size:12px;color:var(--ink)}.filters input{width:125px}.sort-label{margin-left:auto}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:white;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s;cursor:pointer;min-width:0}.card:hover{border-color:#9ebba9;box-shadow:0 5px 18px #142f3509}.gallery{height:222px;position:relative;background:#fff;overflow:hidden;isolation:isolate}.product-image{height:100%;width:100%;object-fit:contain;padding:22px 28px;display:block;mix-blend-mode:multiply}.no-photo{height:100%;display:grid;place-items:center;color:#8d9994;font-size:12px;background:#fafbf9}.photo-count{position:absolute;bottom:10px;right:12px;background:#ffffffee;color:#617369;font-size:10px;border:1px solid #e4e9e4;border-radius:10px;padding:3px 7px}.gallery-arrow{position:absolute;top:calc(50% - 19px);height:38px;width:32px;display:grid;place-items:center;border:1px solid #dce4de;border-radius:7px;background:#fffffff0;color:var(--ink);font-size:23px;z-index:2}.gallery-arrow.prev{left:7px}.gallery-arrow.next{right:7px}.card-info{padding:17px 18px 18px;border-top:1px solid #eef1ee;display:flex;flex-direction:column;flex:1}.badge{font-size:9px;font-weight:700;letter-spacing:.45px;color:#427463;display:inline-block;margin-bottom:12px}.badge.compras{color:#6d729c}.title-button{text-align:left;background:none;border:0;color:var(--ink);padding:0;font-size:14px;font-weight:600;line-height:1.5;width:100%;margin:0 0 18px;min-height:42px}.price-prefix{font-size:10px;color:var(--muted);margin: auto 0 4px}.price{font-size:24px;font-weight:700;letter-spacing:-.7px;margin:0;font-variant-numeric:tabular-nums}.price small{font-size:12px;font-weight:500;letter-spacing:0;margin-right:4px}.availability{font-size:10px;color:var(--muted);margin:9px 0 18px}.availability.confirmed{color:#367857}.card-bottom{border-top:1px solid #eef1ee;padding-top:13px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:10px;color:var(--muted)}.open-button{border:0;background:none;color:var(--ink);font-size:11px;font-weight:650;padding:5px 0}.empty{padding:58px 20px 65px;border:1px dashed #cbd8cf;background:#fafcf9;border-radius:12px;text-align:center;color:var(--muted)}.empty-icon{display:block;font-size:46px;font-weight:300;color:#77a18a}.empty h3{color:var(--ink);font-size:18px;font-weight:600}.empty p{font-size:13px;line-height:1.75}.notice,.error{padding:14px 18px;margin-bottom:18px;border:1px solid #e2d3af;border-radius:8px;background:#fffaf0;font-size:12px;line-height:1.5;color:#806128}.error{background:#fff3f1;color:#923a2a;border-color:#ebcbc5}.secondary{border:1px solid #b9ccc0;border-radius:8px;padding:12px 22px;background:white;color:var(--ink);font-size:12px;font-weight:600}.more{display:block;margin:28px auto}.skeleton{min-height:385px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(100deg,#fff 30%,#e9efea 48%,#fff 68%);background-size:250% 100%;animation:shimmer 1.8s infinite}.loading-label{grid-column:1/-1;font-size:12px;color:var(--muted)}@keyframes shimmer{to{background-position:-160% 0}}footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 38px;display:flex;gap:25px;align-items:center}footer strong{font-size:15px}footer p{font-size:10px;color:var(--muted);line-height:1.7;margin:0}dialog{border:0;border-radius:16px;width:min(940px,calc(100% - 40px));max-height:90dvh;padding:0;background:#fff;color:var(--ink);box-shadow:0 20px 80px #142f3533}dialog::backdrop{background:#122c3480;backdrop-filter:blur(3px)}.dialog-header{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;border-bottom:1px solid var(--line);position:sticky;top:0;background:white;z-index:5}.dialog-header .eyebrow{margin:0}.icon-button{border:1px solid var(--line);border-radius:8px;background:white;width:36px;height:36px}.detail-layout{display:grid;grid-template-columns:310px 1fr}.detail-product{padding:24px;border-right:1px solid var(--line)}.detail-product .gallery{height:260px}.detail-product h2{font-size:19px;line-height:1.4;letter-spacing:-.3px;margin:16px 0}.detail-product .origin-link{font-size:11px;color:var(--muted);display:inline-block;margin-top:20px}.detail-offers{padding:28px;min-width:0}.detail-offers h3{font-size:20px;margin:0 0 7px;letter-spacing:-.5px}.small{color:var(--muted);font-size:11px;line-height:1.6}.offer{display:flex;align-items:center;gap:13px;padding:18px 0;border-bottom:1px solid #e6ece7}.offer-logo{height:36px;width:58px;object-fit:contain;flex:none}.offer-store{flex:1;min-width:0}.offer-store strong{display:block;font-size:13px}.offer-store p{font-size:10px;color:var(--muted);line-height:1.5;margin:5px 0 0}.offer-price{font-size:16px;font-weight:700;white-space:nowrap;letter-spacing:-.3px}.offer-link{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);border-radius:7px;text-decoration:none;flex:none}.best-tag{color:#3a8060;font-size:9px;font-weight:700;display:block;margin-bottom:5px}.detail-warning{margin:18px 0;font-size:11px;color:var(--muted);line-height:1.6}.gallery-status{font-size:10px;color:#6b8073;text-align:center}.gallery-loader{position:absolute;left:12px;bottom:10px;background:#ffffffeb;font-size:9px;color:#698271;padding:4px 7px;border-radius:5px}.gallery-retry{position:absolute;bottom:9px;left:10px;font-size:10px;border:1px solid var(--line);background:white;border-radius:5px;padding:5px 8px}.dialog-error{padding:20px 0}.dialog-error p{font-size:12px;line-height:1.6;color:#923a2a}body:has(dialog[open]){overflow:hidden}@media(min-width:1400px){.gallery{height:240px}}@media(max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{gap:30px}.top-note{display:none}.detail-layout{grid-template-columns:280px 1fr}}@media(max-width:720px){.top-inner{height:66px;padding:0 20px}.brand{font-size:21px}.currency span{display:none}.shell{padding:0 18px}.hero{grid-template-columns:1fr;gap:28px;padding:34px 0 30px}h1{font-size:42px;letter-spacing:-1.7px}.hero-copy{margin-top:14px;font-size:13px}.eyebrow{margin-bottom:14px}.sources-line{margin-bottom:0}.desktop-break{display:none}.toolbar{padding-top:24px}.result-summary h2{font-size:18px}.filters{display:grid;grid-template-columns:1fr 1fr;gap:12px}.filters input,.filters select{width:100%;min-width:0}.sort-label{margin-left:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gallery{height:180px}.product-image{padding:18px}.card-info{padding:13px 12px}.title-button{font-size:12px;min-height:54px;margin-bottom:12px}.price{font-size:21px}.price small{font-size:10px}.card-bottom{flex-direction:column;align-items:start;gap:3px}.availability{font-size:9px;margin-bottom:12px}.gallery-arrow{width:28px;height:34px;font-size:20px}.gallery-arrow.prev{left:4px}.gallery-arrow.next{right:4px}.badge{font-size:8px}.text-button{font-size:11px}footer{align-items:flex-start;gap:20px}.empty{padding:38px 18px}.empty p{font-size:12px}dialog{width:100%;height:94dvh;max-height:94dvh;margin:auto 0 0;border-radius:16px 16px 0 0}.dialog-header{padding:14px 18px}.detail-layout{display:block}.detail-product{padding:16px 20px;border-right:0;border-bottom:1px solid var(--line)}.detail-product .gallery{height:225px}.detail-product h2{font-size:17px;margin:12px 0}.detail-product .origin-link{margin-top:12px}.detail-offers{padding:24px 20px}.offer{gap:9px}.offer-logo{width:44px}.offer-price{font-size:14px}.search-field .primary{padding:14px}.search-field .primary span{margin-left:5px}}@media(max-width:365px){.grid{grid-template-columns:1fr}.gallery{height:230px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+/* Exchange and source coverage */
+.exchange{display:flex;align-items:center;gap:24px;padding:18px 20px;margin-top:24px;background:#eaf0e9;border:1px solid #d7e2d8;border-radius:10px}
+.exchange-base{flex:none;display:grid;gap:5px}.exchange-base>span{font-size:8px;letter-spacing:1.1px;color:#59755e;font-weight:700}.exchange-base>strong{font-size:18px;letter-spacing:-.3px}
+.exchange-values{display:flex;align-items:center;gap:28px;flex:1;font-variant-numeric:tabular-nums}.exchange-value{display:grid;gap:4px}.exchange-value small{font-size:10px;color:#617165}.exchange-value strong{font-size:15px;font-weight:650;white-space:nowrap}.exchange-origin{max-width:220px}.exchange-origin a{font-size:10px;text-decoration:none;font-weight:650}.exchange-origin p{font-size:9px;color:#617165;line-height:1.6;margin:5px 0 0}.exchange .icon-button{flex:none;color:#436952;font-size:21px;background:transparent}.exchange.is-stale{border-color:#d7c6a2}.exchange-error{color:#876328;font-size:12px}
+.sources-line{display:block;line-height:1.8}.hero{padding-top:38px}.provenance{font-size:9px;color:var(--muted);margin:-6px 0 12px}.badge.visaovip{color:#8a543c}.badge.cellshop{color:#395f93}.badge.shoppingchina{color:#965146}.badge.casamaringa{color:#56784c}.availability.unavailable{color:#905d4b}.direct-offer-action{display:inline-block;text-decoration:none;margin-top:8px}.direct-source-note{line-height:1.7}.detail-product .provenance{margin-top:0}
+.source-status{display:flex;flex-wrap:wrap;gap:7px;margin:-4px 0 12px}.source-pill{font-size:10px;border:1px solid var(--line);border-radius:5px;padding:6px 9px;background:#fff;color:var(--muted);display:inline-flex;align-items:center;gap:6px}.source-pill:before{content:'';height:5px;width:5px;background:#a5b2ab;border-radius:50%}.source-pill[data-status=done]:before{background:#458a61}.source-pill[data-status=error]:before{background:#b78036}.source-pill[data-status=loading]:before{background:#448c8c}.search-progress{font-size:11px;color:var(--muted);line-height:1.6;display:flex;align-items:center;gap:8px;margin:0 0 20px}.search-progress.loading:before{content:'';width:10px;height:10px;border:2px solid #d1ded5;border-top-color:#477c61;border-radius:50%;animation:spin .8s linear infinite;flex:none}@keyframes spin{to{transform:rotate(360deg)}}.notice .text-button{margin-left:8px;color:inherit}.empty .small{max-width:400px;margin:12px auto}
+@media(max-width:1000px){.exchange{gap:18px}.exchange-values{gap:20px}.exchange-origin{max-width:185px}.exchange-value strong{font-size:14px}}
+@media(max-width:720px){.exchange{display:grid;grid-template-columns:1fr auto;padding:15px;margin-top:18px;gap:14px}.exchange-base{display:flex;align-items:center;justify-content:space-between;grid-column:1/-1;padding-right:38px}.exchange-base>strong{font-size:16px}.exchange-values{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.exchange-value strong{font-size:13px}.exchange-origin{grid-column:1/-1;max-width:none;display:flex;justify-content:space-between;align-items:baseline;gap:10px}.exchange-origin p{max-width:175px;margin:0;text-align:right;font-size:8px}.exchange .icon-button{grid-column:2;grid-row:1;justify-self:end;width:28px;height:28px;font-size:19px}.hero{padding-top:30px}.provenance{font-size:8px;margin-top:-5px}.source-pill{font-size:9px;padding:5px 7px}.search-progress{font-size:10px}.source-status{margin-top:0}.notice .text-button{display:block;margin:4px 0 0;padding-left:0;text-align:left}}
+@media(prefers-reduced-motion:reduce){.search-progress.loading:before{animation:none}}
+/* Keep the newly added currency and coverage information legible on phones. */
+.exchange-base>span{font-size:12px;letter-spacing:.4px}.exchange-value small,.exchange-origin a,.exchange-origin p,.exchange-error,.provenance,.source-pill,.search-progress{font-size:12px}.exchange-value strong{font-size:16px}.exchange-origin{max-width:250px}.exchange-origin p{line-height:1.5}.exchange-base{max-width:150px}.exchange-base>span{line-height:1.4}.source-pill{padding:7px 9px}
+@media(max-width:1000px){.exchange{flex-wrap:wrap}.exchange-origin{max-width:none;flex:1}.exchange-values{gap:22px}}
+@media(max-width:720px){.exchange{display:grid}.exchange-base{max-width:none}.exchange-base>span{font-size:11px}.exchange-value small{font-size:12px}.exchange-value strong{font-size:14px}.exchange-origin p{font-size:11px;max-width:190px}.exchange-origin a{font-size:11px}.provenance{font-size:11px}.source-pill{font-size:11px}.search-progress{font-size:12px}.exchange-values{gap:8px}.exchange-base{justify-content:flex-start;gap:15px}}
+</style></head>
+<body><a class="skip" href="#query">Ir para busca</a><header class="topbar"><div class="top-inner"><a class="brand" href="/" aria-label="BuscaPY, início"><span class="brandmark">P</span>Busca<span class="brand-py">PY</span></a><span class="top-note">Suas lojas em uma única busca.</span><span class="currency">USD <span>· preços em dólar</span></span></div></header>
+<main class="shell">
+<section class="exchange" aria-label="Cotação do dólar"><div class="exchange-base"><span>CÂMBIO DE REFERÊNCIA</span><strong>US$ 1,00</strong></div><div id="exchange-values" class="exchange-values" aria-live="polite"><span class="small">Consultando cotação…</span></div><div class="exchange-origin"><a href="https://www.comprasparaguai.com.br/" target="_blank" rel="noopener noreferrer">Compras Paraguai ↗</a><p id="exchange-date">Carregando data de atualização</p></div><button id="refresh-exchange" class="icon-button" aria-label="Atualizar cotação" title="Atualizar cotação">↻</button></section>
+<section class="hero"><div><p class="eyebrow">SUA BUSCA NO PARAGUAI</p><h1>O produto certo.<br><span>O preço à vista.</span></h1><p class="hero-copy">Explore produtos, veja as fotos e compare as ofertas<br class="desktop-break"> de cada loja antes de decidir.</p></div><div class="search-block"><form id="search" role="search"><label for="query">O que você está procurando?</label><div class="search-field"><span aria-hidden="true">⌕</span><input id="query" type="search" required minlength="2" maxlength="120" autocomplete="off" placeholder="Produto, marca ou modelo"><button class="primary" id="search-button">Buscar <span aria-hidden="true">↗</span></button></div></form><div class="suggestions"><span>Experimente</span><button data-query="Poco F7 Pro">Poco F7 Pro</button><button data-query="Xiaomi H50">Xiaomi H50</button><button data-query="iPhone 17">iPhone 17</button></div><p class="sources-line">LG Importados · Compras Paraguai · VisãoVip<br>Shopping China · Cellshop · Casa Maringá</p></div></section>
+<section class="workspace" aria-label="Catálogo"><div class="toolbar"><div class="result-summary"><h2 id="result-title">Explore as ofertas</h2><p id="result-subtitle">Mais lojas para encontrar o seu próximo produto.</p></div><button id="clear" class="text-button">Limpar filtros</button></div><div class="filters"><label>Loja ou comparador<select id="source"><option value="all">Todas as fontes</option><option value="lg">LG Importados</option><option value="compras">Compras Paraguai</option><option value="visaovip">VisãoVip</option><option value="shoppingchina">Shopping China</option><option value="cellshop">Cellshop</option><option value="casamaringa">Casa Maringá</option></select></label><label>Disponibilidade<select id="stock"><option value="all">Todas</option><option value="in_stock">Estoque confirmado</option><option value="out_of_stock">Sem estoque</option><option value="unknown">Não informada</option></select></label><label>Até US$<input type="number" min="0" step="1" id="max-price" placeholder="Sem limite"></label><label class="sort-label">Ordenar por<select id="sort"><option value="relevance">Ordem da busca</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option></select></label></div><div id="source-status" class="source-status" hidden></div><p id="search-progress" class="search-progress" role="status" aria-live="polite" hidden></p><div id="message" role="status" aria-live="polite"></div><div id="results"><div class="empty"><span class="empty-icon" aria-hidden="true">⌕</span><h3>Sua próxima compra começa aqui.</h3><p>Pesquise um modelo para ver fotos e preços.<br>Nos produtos do Compras Paraguai, abra o card para comparar as lojas.</p></div></div><button id="more" class="secondary more" hidden>Mostrar mais produtos</button></section><footer><strong>BuscaPY</strong><p>Preços em dólar, sujeitos a alteração. Confirme o valor e o estoque com a loja.<br>VisãoVip, Shopping China e Cellshop: ofertas via Compras Paraguai. LG e Casa Maringá: consulta direta.<br>A cotação é uma referência; cada loja define o câmbio aplicado na compra.</p></footer></main>
+<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-header"><span class="eyebrow">DETALHES DO PRODUTO</span><button id="close-detail" class="icon-button" aria-label="Fechar detalhes">✕</button></div><div id="detail-body"></div></dialog>
+<script>const SOURCE_CONFIG = {"lg":{"label":"LG Importados","mode":"direct"},"compras":{"label":"Compras Paraguai","mode":"comparator"},"visaovip":{"label":"VisãoVip","mode":"via_compras","shop":"visaovip","hosts":["visaovip.com"]},"shoppingchina":{"label":"Shopping China","mode":"via_compras","shop":"shopping-china","hosts":["shoppingchina.com.py","shoppingchina.com.br"]},"cellshop":{"label":"Cellshop","mode":"via_compras","shop":"cellshop","hosts":["cellshop.com"]},"casamaringa":{"label":"Casa Maringá","mode":"direct"}};
+const $=selector=>document.querySelector(selector);
+const money=value=>value==null?'Preço não informado':'US$ '+value.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const escapeText=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const sourceName=source=>SOURCE_CONFIG[source]?.label||source;
+const sourceOrder=Object.keys(SOURCE_CONFIG);
+const sourceNote=item=>item.via==='compras'?'Oferta via Compras Paraguai':item.source==='compras'?'Compare as ofertas das lojas':'Consulta direta à loja';
+const stockText=item=>item.availability==='in_stock'?'● Estoque confirmado pela loja':item.availability==='out_of_stock'?'Sem estoque na loja':'Disponibilidade a confirmar na loja';
+const items=new Map(),positions=new Map(),details=new Map(),tasks=new Map();
+let all=[],visibleLimit=24,searchController,searchVersion=0,selected=null,activeJobs=0,queue=[],submittedQuery='',currentRun=null,currentRate=null;
+const dialog=$('#detail');
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+ if(!entry.isIntersecting)return;
+ observer.unobserve(entry.target);
+ const item=items.get(entry.target.dataset.key);
+ if(item?.productPath&&!item.galleryLoaded)enqueue(item).catch(()=>{});
+}),{rootMargin:'80px'});
+function gallery(item,context='card') {
+ const index=(positions.get(item.id)||0)%(item.images.length||1);
+ const photo=item.images[index];
+ return `<div class="gallery" data-gallery="${escapeText(item.id)}" data-context="${context}">${photo?`<img class="product-image" src="${escapeText(photo)}" alt="${escapeText(item.title)} — foto ${index+1}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:'<div class="no-photo">Imagem indisponível</div>'}${item.images.length>1?`<button type="button" class="gallery-arrow prev" data-step="-1" data-key="${escapeText(item.id)}" aria-label="Foto anterior de ${escapeText(item.title)}">‹</button><button type="button" class="gallery-arrow next" data-step="1" data-key="${escapeText(item.id)}" aria-label="Próxima foto de ${escapeText(item.title)}">›</button><span class="photo-count" aria-live="polite">${index+1} / ${item.images.length}</span>`:''}${!item.galleryLoaded&&item.productPath?`<span class="gallery-loader">${item.galleryFailed?'':'Carregando galeria…'}</span>${item.galleryFailed?`<button class="gallery-retry" data-retry="${escapeText(item.id)}">Tentar galeria</button>`:''}`:''}</div>`;
+}
+function refreshGalleries(item) {
+ document.querySelectorAll('[data-gallery]').forEach(node=>{
+ if(node.dataset.gallery!==item.id)return;
+ const focus=node.contains(document.activeElement)?document.activeElement.dataset.step:null;
+ const wrapper=document.createElement('div');wrapper.innerHTML=gallery(item,node.dataset.context);
+ const next=wrapper.firstElementChild;node.replaceWith(next);
+ if(focus)next.querySelector(`[data-step="${focus}"]`)?.focus({preventScroll:true});
+ });
+}
+function card(item) {
+ return `<article class="card" data-key="${escapeText(item.id)}">${gallery(item)}<div class="card-info"><span class="badge ${escapeText(item.source)}">${escapeText(sourceName(item.source).toUpperCase())}</span><p class="provenance">${sourceNote(item)}</p><button class="title-button" data-open="${escapeText(item.id)}">${escapeText(item.title)}</button><p class="price-prefix">${item.source==='compras'?'A partir de':'Preço na loja'}</p><p class="price">${item.priceUsd==null?'Sob consulta':`<small>US$</small>${item.priceUsd.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}`}</p><p class="availability ${item.availability==='in_stock'?'confirmed':item.availability==='out_of_stock'?'unavailable':''}">${stockText(item)}</p><div class="card-bottom"><span>${item.source==='compras'?escapeText(item.store):'Oferta da loja'}</span><button class="open-button" data-open="${escapeText(item.id)}">${item.source==='compras'?'Comparar lojas':'Ver detalhes'} <span aria-hidden="true">↗</span></button></div></div></article>`;
+}
+function render() {
+ observer.disconnect();
+ const source=$('#source').value,stock=$('#stock').value,max=$('#max-price').value,sort=$('#sort').value;
+ const filtered=all.filter(item=>(source==='all'||item.source===source)&&(stock==='all'||item.availability===stock)&&(!max||(item.priceUsd!=null&&item.priceUsd<=Number(max))));
+ if(sort!=='relevance')filtered.sort((a,b)=>a.priceUsd==null?(b.priceUsd==null?0:1):b.priceUsd==null?-1:sort==='price-asc'?a.priceUsd-b.priceUsd:b.priceUsd-a.priceUsd);
+ else filtered.sort((a,b)=>(a.searchRank||0)-(b.searchRank||0)||sourceOrder.indexOf(a.source)-sourceOrder.indexOf(b.source));
+ $('#result-title').textContent=filtered.length+' '+(filtered.length===1?'resultado encontrado':'resultados encontrados');
+ $('#result-subtitle').textContent=submittedQuery?'Resultados para “'+submittedQuery+'” · preços em dólar':'Mais lojas para comparar.';
+ const focus=document.activeElement?.closest('#results [data-open]')?.dataset.open;
+ const allFailed=currentRun&&!currentRun.loading&&Object.values(currentRun.sources).every(s=>s.status==='error')&&!all.length;
+ const emptyTitle=currentRun?.loading?'Consultando as lojas…':allFailed?'Não conseguimos concluir a busca.':'Nenhum produto por aqui.';
+ const emptyCopy=currentRun?.loading?'Os resultados aparecerão conforme as páginas forem consultadas.':allFailed?'As fontes estão indisponíveis agora. Tente novamente.':'Tente outro modelo ou ajuste os filtros.';
+ $('#results').innerHTML=filtered.length?`<div class="grid">${filtered.slice(0,visibleLimit).map(card).join('')}</div>`:`<div class="empty"><h3>${emptyTitle}</h3><p>${emptyCopy}</p></div>`;
+ if(focus)Array.from(document.querySelectorAll('#results [data-open]')).find(node=>node.dataset.open===focus)?.focus({preventScroll:true});
+ $('#more').hidden=filtered.length<=visibleLimit;
+ document.querySelectorAll('.card').forEach(node=>observer.observe(node));
+}
+function enqueue(item,priority=false) {
+ if(details.has(item.id))return Promise.resolve(details.get(item.id));
+ if(tasks.has(item.id))return tasks.get(item.id);
+ const task=new Promise((resolve,reject)=>{const job={item,resolve,reject};priority?queue.unshift(job):queue.push(job);});
+ tasks.set(item.id,task);pump();return task;
+}
+function pump() {
+ while(activeJobs<2&&queue.length) {
+ const {item,resolve,reject}=queue.shift();activeJobs++;
+ const path=item.productPath||new URL(item.productUrl).pathname;
+ fetch('/api/product?path='+encodeURIComponent(path),{signal:AbortSignal.timeout(30000)})
+ .then(async response=>{if(!response.ok)throw Error('Detalhes indisponíveis');return response.json();})
+ .then(data=>{
+ details.set(item.id,data);item.images=data.images?.length?data.images:item.images;item.galleryLoaded=true;item.galleryFailed=false;
+ refreshGalleries(item);resolve(data);
+ }).catch(error=>{item.galleryFailed=true;refreshGalleries(item);reject(error);})
+ .finally(()=>{activeJobs--;tasks.delete(item.id);pump();});
+ }
+}
+function detailLayout(item) {
+ return `<div class="detail-layout"><div class="detail-product">${gallery(item,'detail')}<span class="badge ${escapeText(item.source)}">${escapeText(sourceName(item.source).toUpperCase())}</span><p class="provenance">${sourceNote(item)}</p><h2 id="detail-title">${escapeText(item.title)}</h2><p class="price-prefix">${item.source==='compras'?'Menor preço anunciado':'Preço na loja'}</p><p class="price">${money(item.priceUsd)}</p><a class="origin-link" href="${escapeText(item.productUrl)}" target="_blank" rel="noopener noreferrer">Abrir página de origem ↗</a></div><section class="detail-offers" id="offer-list" aria-live="polite"></section></div>`;
+}
+function showOffers(item,data) {
+ const offers=data.offers||[];
+ $('#offer-list').innerHTML=`<h3>${offers.length} ${offers.length===1?'oferta':'ofertas'} para comparar</h3><p class="small">Da mais barata à mais cara · preços em dólar</p>${offers.length?offers.map((offer,i)=>`<div class="offer">${offer.logo?`<img class="offer-logo" src="${escapeText(offer.logo)}" alt="" loading="lazy">`:''}<div class="offer-store">${i===0&&offer.priceUsd!=null?'<span class="best-tag">MENOR PREÇO LISTADO</span>':''}<strong>${escapeText(offer.store)}</strong><p>${escapeText(offer.title)}</p></div><span class="offer-price">${money(offer.priceUsd)}</span><a class="offer-link" href="${escapeText(offer.url)}" target="_blank" rel="noopener noreferrer" aria-label="Ver oferta na ${escapeText(offer.store)}">↗</a></div>`).join(''):'<p class="detail-warning">Nenhuma oferta pôde ser lida nesta página. Consulte a origem para verificar a disponibilidade.</p>'}<p class="detail-warning">Valores consultados no Compras Paraguai. Confirme estoque, condições e preço final com a loja antes de comprar.</p><p class="small">Consultado às ${new Date(data.checkedAt||Date.now()).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</p>`;
+}
+async function openItem(id) {
+ const item=items.get(id);if(!item)return;
+ selected=id;$('#detail-body').innerHTML=detailLayout(item);
+ if(!dialog.open)dialog.showModal();
+ $('#close-detail').focus();dialog.scrollTop=0;
+ if(item.source!=='compras') {
+ const name=escapeText(sourceName(item.source));
+ $('#offer-list').innerHTML=`<h3>Oferta da ${name}</h3><p class="small">${stockText(item)}</p><div class="offer"><div class="offer-store"><strong>${name}</strong><p>${sourceNote(item)}</p></div><span class="offer-price">${money(item.priceUsd)}</span></div><p class="detail-warning">${item.via==='compras'?'Este preço foi publicado pela loja no Compras Paraguai.':'Preço e disponibilidade consultados no catálogo da loja.'} Confirme as condições e o valor final antes de comprar.</p><a class="secondary direct-offer-action" href="${escapeText(item.productUrl)}" target="_blank" rel="noopener noreferrer">Ver produto na loja ↗</a>${item.referenceUrl?`<p class="small direct-source-note"><a href="${escapeText(item.referenceUrl)}" target="_blank" rel="noopener noreferrer">Conferir oferta no Compras Paraguai ↗</a></p>`:''}`;
+ if(item.productPath&&!item.galleryLoaded)enqueue(item,true).catch(()=>{});
+ return;
+ }
+ $('#offer-list').innerHTML='<h3>Comparando as lojas</h3><p class="small">Buscando os valores na página do produto…</p><div class="skeleton" style="min-height:180px;margin-top:20px"></div>';
+ try{const data=await enqueue(item,true);if(selected===id&&dialog.open)showOffers(item,data);}
+ catch{if(selected===id&&dialog.open)$('#offer-list').innerHTML=`<h3>Ofertas indisponíveis agora</h3><div class="dialog-error"><p>Não foi possível consultar o Compras Paraguai. Você pode tentar novamente ou abrir a página de origem.</p><button class="secondary" data-open="${escapeText(id)}">Tentar novamente</button></div>`;}
+}
+async function getJSON(url,signal) {
+ const controller=new AbortController();
+ const abort=()=>controller.abort();
+ if(signal?.aborted)abort();else signal?.addEventListener('abort',abort,{once:true});
+ const timer=setTimeout(abort,28000);
+ try {const response=await fetch(url,{signal:controller.signal});if(!response.ok)throw Error('Consulta indisponível');return await response.json();}
+ finally{clearTimeout(timer);signal?.removeEventListener('abort',abort);}
+}
+function mergeItems(incoming) {
+ for(const item of incoming) {
+  if(items.has(item.id))continue;
+  item.images=item.images||[];
+  const detail=details.get(item.id);
+  if(detail){item.images=detail.images?.length?detail.images:item.images;item.galleryLoaded=true;}
+  items.set(item.id,item);
+ }
+ all=Array.from(items.values());
+}
+function renderProgress(run) {
+ const known=Object.values(run.sources).reduce((sum,s)=>sum+s.totalPages,0);
+ const failed=Object.entries(run.sources).filter(([,s])=>s.status==='error').map(([id])=>sourceName(id));
+ $('#source-status').hidden=false;
+ $('#source-status').innerHTML=sourceOrder.map(id=>{
+  const state=run.sources[id],count=all.filter(item=>item.source===id).length;
+  const label=state.status==='error'?'incompleta':state.status==='done'?String(count):'consultando';
+  const note=SOURCE_CONFIG[id].mode==='via_compras'?'Via Compras Paraguai':'Consulta à fonte';
+  return `<span class="source-pill" data-status="${state.status}" title="${note}">${escapeText(sourceName(id))}<span>${label}</span></span>`;
+ }).join('');
+ const progress=$('#search-progress');progress.hidden=false;progress.classList.toggle('loading',run.loading);
+ progress.textContent=run.loading?`Consultando todas as páginas · ${run.completed.size} de ${known} páginas recebidas`:
+  failed.length?`${run.completed.size} páginas consultadas · resultados parciais`:`Todas as ${run.completed.size} páginas disponíveis foram consultadas.`;
+ $('#message').innerHTML=failed.length?`<div class="notice">Consulta incompleta: ${escapeText(failed.join(', '))}. Os resultados recebidos continuam disponíveis.${!run.loading?'<button class="text-button" id="retry-missing">Tentar páginas pendentes</button>':''}</div>`:'';
+}
+async function loadPages(run,initialJobs) {
+ run.loading=true;
+ const jobs=initialJobs.slice();
+ initialJobs.forEach(job=>run.sources[job.source].status='loading');
+ renderProgress(run);render();
+ async function work() {
+  while(jobs.length&&!run.controller.signal.aborted) {
+   const job=jobs.shift(),key=job.source+':'+job.page;
+   try {
+    const data=await getJSON('/api/search?q='+encodeURIComponent(run.query)+'&source='+job.source+'&page='+job.page,run.controller.signal);
+    if(currentRun!==run||run.controller.signal.aborted)return;
+    const meta=data.pagination?.[job.source];
+    if(!Array.isArray(data.items)||data.sources?.[job.source]!=='ok'||!meta||meta.page!==job.page)throw Error('Resposta inesperada');
+    mergeItems(data.items);run.completed.add(key);run.failed.delete(key);
+    const state=run.sources[job.source];state.totalPages=Math.max(job.page,meta.totalPages||1);
+    if(meta.nextPage!=null) {
+     if(!Number.isSafeInteger(meta.nextPage)||meta.nextPage<=job.page)throw Error('Paginação inválida');
+     jobs.push({source:job.source,page:meta.nextPage});state.status='loading';
+    }else state.status='done';
+   }catch(error) {
+    if(currentRun!==run||run.controller.signal.aborted)return;
+    run.failed.set(key,job);run.sources[job.source].status='error';
+   }
+   renderProgress(run);render();
+  }
+ }
+ await Promise.all(Array.from({length:3},()=>work()));
+ if(currentRun!==run||run.controller.signal.aborted)return;
+ run.loading=false;renderProgress(run);render();
+}
+async function search(event) {
+ event?.preventDefault();const query=$('#query').value.trim();if(query.length<2||query.length>120)return;
+ searchVersion++;searchController?.abort();searchController=new AbortController();observer.disconnect();
+ queue.splice(0).forEach(job=>{tasks.delete(job.item.id);job.reject(Error('Busca alterada'));});
+ if(dialog.open)dialog.close();
+ all=[];items.clear();submittedQuery=query;visibleLimit=24;
+ currentRun={query,controller:searchController,loading:true,completed:new Set(),failed:new Map(),sources:Object.fromEntries(sourceOrder.map(id=>[id,{status:'loading',totalPages:1}]))};
+ await loadPages(currentRun,sourceOrder.map(source=>({source,page:1})));
+}
+async function loadExchange() {
+ const button=$('#refresh-exchange');if(button.disabled)return;button.disabled=true;
+ try {
+  const data=await getJSON('/api/exchange');
+  if(data.base!=='USD'||!data.updatedLabel||['BRL','PYG','ARS'].some(id=>!Number.isFinite(data.rates?.[id])||data.rates[id]<=0))throw Error('Cotação inválida');
+  currentRate=data;
+  $('#exchange-values').innerHTML=[['BRL','Real','R$'],['PYG','Guarani','G$'],['ARS','Peso argentino','AR$']].map(([id,label,symbol])=>`<span class="exchange-value"><small>${label}</small><strong>${symbol} ${data.rates[id].toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}</strong></span>`).join('');
+  $('#exchange-date').textContent=data.updatedLabel;$('.exchange').classList.remove('is-stale');
+ }catch {
+  $('.exchange').classList.add('is-stale');
+  if(currentRate)$('#exchange-date').textContent=currentRate.updatedLabel+' · Não foi possível atualizar agora.';
+  else {$('#exchange-values').innerHTML='<span class="exchange-error">Cotação indisponível agora</span>';$('#exchange-date').textContent='Use ↻ para tentar novamente.';}
+ }finally{button.disabled=false;}
+}
+$('#refresh-exchange').addEventListener('click',loadExchange);
+loadExchange();
+setInterval(()=>{if(document.visibilityState==='visible')loadExchange();},600000);
+$('#search').addEventListener('submit',search);
+['source','stock','max-price','sort'].forEach(id=>$('#'+id).addEventListener(id==='max-price'?'input':'change',()=>{visibleLimit=24;if(submittedQuery)render();}));
+$('#clear').addEventListener('click',()=>{$('#source').value='all';$('#stock').value='all';$('#max-price').value='';$('#sort').value='relevance';if(submittedQuery)render();});
+$('#more').addEventListener('click',()=>{visibleLimit+=24;render();});
+$('#close-detail').addEventListener('click',()=>dialog.close());
+let previousFocus;
+dialog.addEventListener('close',()=>{selected=null;previousFocus?.focus({preventScroll:true});});
+dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();}});
+document.addEventListener('click',event=>{
+ const step=event.target.closest('[data-step]');if(step){const item=items.get(step.dataset.key);positions.set(item.id,((positions.get(item.id)||0)+Number(step.dataset.step)+item.images.length)%item.images.length);refreshGalleries(item);return;}
+ const retry=event.target.closest('[data-retry]');if(retry){const item=items.get(retry.dataset.retry);item.galleryFailed=false;refreshGalleries(item);enqueue(item,true).catch(()=>{});return;}
+ const sample=event.target.closest('[data-query]');if(sample){$('#query').value=sample.dataset.query;search();return;}
+ if(event.target.id==='retry-search'){search();return;}
+ if(event.target.id==='retry-missing'){if(currentRun&&!currentRun.loading)loadPages(currentRun,Array.from(currentRun.failed.values()));return;}
+ const open=event.target.closest('[data-open]');if(open){previousFocus=open;openItem(open.dataset.open);return;}
+ const c=event.target.closest('.card');if(c&&!event.target.closest('button,a')){previousFocus=c.querySelector('.title-button');openItem(c.dataset.key);}
+});
+document.addEventListener('error',event=>{const img=event.target;if(img.matches?.('.product-image')){img.style.display='none';const note=document.createElement('div');note.className='no-photo';note.textContent='Imagem indisponível';img.after(note);}if(img.matches?.('.offer-logo'))img.hidden=true;},true);
+let touchStart;
+document.addEventListener('touchstart',event=>{const g=event.target.closest('[data-gallery]');touchStart=g?{id:g.dataset.gallery,x:event.touches[0].clientX,y:event.touches[0].clientY}:null;},{passive:true});
+document.addEventListener('touchend',event=>{if(!touchStart)return;const dx=event.changedTouches[0].clientX-touchStart.x,dy=event.changedTouches[0].clientY-touchStart.y,item=items.get(touchStart.id);if(item?.images.length>1&&Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){positions.set(item.id,((positions.get(item.id)||0)+(dx<0?1:-1)+item.images.length)%item.images.length);refreshGalleries(item);}touchStart=null;},{passive:true});
+</script></body></html>
