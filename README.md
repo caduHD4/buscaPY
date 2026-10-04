@@ -64,7 +64,7 @@ Uma falha preserva os resultados anteriores e permite repetir apenas as páginas
 
 ## Verificação
 
-32 testes automatizados de parsers, adaptadores, rotas do Worker e comportamento de interface em DOM simulado. Cobrem procedência, moeda, estoque, paginação acima dos limites anteriores, cancelamento, falhas parciais, repetição de páginas, filtros, galerias, câmbio indisponível e câmbio desatualizado. As fixtures são trechos de respostas públicas e não alimentam a busca real.
+34 testes automatizados de parsers, adaptadores HTTP, rotas do Worker e comportamento de interface em DOM simulado. Cobrem procedência, moeda, estoque, paginação acima dos limites anteriores, cancelamento, falhas parciais, repetição de páginas, filtros, galerias, câmbio indisponível e câmbio desatualizado. As fixtures são trechos de respostas públicas e não alimentam a busca real.
 
 Consultas reais em 13/09/2026: as seis fontes responderam à busca `Xiaomi H50`; a cotação foi lida da página inicial. A paginação foi conferida nas páginas 2 e 5 (final) da Casa Maringá e 2 e 21 (final) da VisãoVip para `xiaomi`. Uma página de oferta da VisãoVip também retornou sua galeria. Esses testes não garantem disponibilidade futura dos sites nem equivalem a testes visuais em todos os navegadores.
 
