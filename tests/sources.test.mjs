@@ -58,6 +58,19 @@ test('one failed source preserves the other five source results',async()=>{
  }});
  assert.equal(data.sources.lg,'error');assert.equal(Object.values(data.sources).filter(x=>x==='ok').length,5);assert.equal(data.items.length,11);
 });
+test('source failures log a safe transport code without logging the search query',async()=>{
+ const lines=[],original=console.error;
+ console.error=line=>lines.push(String(line));
+ try {
+  await searchSources('private product query',{fetcher:async()=>{
+   const error=new TypeError('fetch failed');error.cause=Object.assign(new Error('DNS lookup failed'),{code:'EAI_AGAIN'});throw error;
+  }});
+ }finally{console.error=original;}
+ assert.equal(lines.length,6);
+ assert.ok(lines.some(line=>line.includes('source=compras')&&line.includes('EAI_AGAIN')));
+ assert.ok(lines.some(line=>line.includes('source=casamaringa')&&line.includes('EAI_AGAIN')));
+ assert.doesNotMatch(lines.join(' '),/private product query/);
+});
 test('upstream challenge or wrong page is a source error instead of empty success',async()=>{
  await assert.rejects(searchPage('xiaomi','cellshop',1,{fetcher:async()=>new Response('<title>Just a moment</title>')}));
 });

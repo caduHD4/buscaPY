@@ -4,6 +4,16 @@ export const CP = 'https://www.comprasparaguai.com.br';
 export const LG = 'https://www.lgimportados.com';
 export const MARINGA = 'https://casamaringa.com.py';
 const clean = s => s.replace(/\s+/g, ' ').trim();
+export function upstreamFailureLabel(error) {
+ let current=error,code=null,depth=0;
+ while(current&&depth++<4){
+  if(typeof current.code==='string'&&/^[A-Z0-9_]+$/.test(current.code)){code=current.code;break;}
+  current=current.cause;
+ }
+ if(code)return `${error?.name==='TypeError'?'TypeError':'Error'}:${code}`;
+ const status=typeof error?.message==='string'&&error.message.match(/^Fonte respondeu (\d{3})$/);
+ return status?`HTTP_${status[1]}`:'Error';
+}
 const price = s => { const n=s.match(/US\$\s*([\d.]+,\d{2})/); return n ? Number(n[1].replaceAll('.','').replace(',','.')) : null; };
 const safeUrl = (s, base=CP) => { if(!s)return null;try {const u=new URL(s,base);return /^https?:$/.test(u.protocol)?u.href:null;} catch{return null;} };
 const images = arr => [...new Set(arr.filter(Boolean).map(s=>safeUrl(s)).filter(s=>s && !s.includes('loading-images')))];

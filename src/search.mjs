@@ -1,4 +1,4 @@
-import {CP,LG,MARINGA,parseSearch,parseStoreSearch,normalizeLg,normalizeMaringa,pageNumbers,isSearchPage} from './catalog.mjs';
+import {CP,LG,MARINGA,parseSearch,parseStoreSearch,normalizeLg,normalizeMaringa,pageNumbers,isSearchPage,upstreamFailureLabel} from './catalog.mjs';
 import {SOURCES} from './sources.mjs';
 
 function pagination(page,totalPages,totalItems) {
@@ -43,6 +43,7 @@ export async function searchSources(query,options={}) {
  results.forEach((r,i)=>{
   const source=keys[i];sources[source]=r.status==='fulfilled'?'ok':'error';
   if(r.status==='fulfilled'){items.push(...r.value.items);pagination[source]=r.value.pagination;}
+  else console.error(`[BuscaPY] source=${source} error=${upstreamFailureLabel(r.reason)}`);
  });
  return {items,sources,pagination,checkedAt:Date.now()};
 }

@@ -1,5 +1,5 @@
 import page from './page.html';
-import { CP, parseDetail, parseExchange, validateProductPath, getText } from './catalog.mjs';
+import { CP, parseDetail, parseExchange, validateProductPath, getText, upstreamFailureLabel } from './catalog.mjs';
 import { SOURCES } from './sources.mjs';
 import { searchPage, searchSources } from './search.mjs';
 const cache=new Map(), pending=new Map();
@@ -16,11 +16,11 @@ export default {async fetch(request) {
  if(u.pathname==='/api/health')return json({ok:true});
  if(u.pathname==='/api/exchange') {
   try{return json(await cached('exchange',async()=>parseExchange(await getText(CP+'/'))));}
-  catch{return json({error:'Não foi possível consultar a cotação no Compras Paraguai.'},502);}
+  catch(error){console.error(`[BuscaPY] operation=exchange error=${upstreamFailureLabel(error)}`);return json({error:'Não foi possível consultar a cotação no Compras Paraguai.'},502);}
  }
  if(u.pathname==='/api/product') {
  let path;try{path=validateProductPath(u.searchParams.get('path'));}catch{return json({error:'Página de produto inválida.'},400);}
- try{return json(await cached('detail:'+path,async()=>{const d=parseDetail(await getText(CP+path));if(!d.title)throw Error('Formato inesperado');return d;}));}catch{return json({error:'Não foi possível carregar as ofertas agora. Tente novamente.'},502);}
+ try{return json(await cached('detail:'+path,async()=>{const d=parseDetail(await getText(CP+path));if(!d.title)throw Error('Formato inesperado');return d;}));}catch(error){console.error(`[BuscaPY] operation=product_detail error=${upstreamFailureLabel(error)}`);return json({error:'Não foi possível carregar as ofertas agora. Tente novamente.'},502);}
  }
  if(u.pathname!=='/api/search')return json({error:'Não encontrado.'},404);
  const q=(u.searchParams.get('q')||'').trim();if(q.length<2||q.length>120)return json({error:'Use entre 2 e 120 caracteres.'},400);
@@ -33,5 +33,5 @@ export default {async fetch(request) {
   }));
   const result=await cached(JSON.stringify(['search',q.toLowerCase(),'all']),()=>searchSources(q));
   return json(result,Object.values(result.sources).every(status=>status==='error')?502:200);
- }catch{return json({error:'A fonte não respondeu. Tente novamente.',sources:source?{[source]:'error'}:{}},502);}
+ }catch(error){console.error(`[BuscaPY] operation=search source=${source||'all'} error=${upstreamFailureLabel(error)}`);return json({error:'A fonte não respondeu. Tente novamente.',sources:source?{[source]:'error'}:{}},502);}
 }};
